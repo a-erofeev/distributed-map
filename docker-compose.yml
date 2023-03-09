@@ -1,0 +1,22 @@
+version: '3'
+services:
+    master_host:
+        image: master_server:1.0
+        hostname: master_host
+        volumes:
+            - ./:/home/test
+            - /tmp:/tmp 
+        networks:     
+            - aerofeev-test-net
+    worker:
+        image: worker:1.0
+        volumes:
+            - ./:/home/test
+            - /tmp:/tmp
+        depends_on:
+            - master_host
+        networks:
+            - aerofeev-test-net
+networks:
+    aerofeev-test-net:
+      external: true               

@@ -22,6 +22,9 @@ usage:
 * start master server with the give number of workers (by default - 2 workers)
 * start clients and send commands to the server
 
+logging:
+* system logs to /tmp/distributed_map.log
+
 ### Consistency guaranties
 * all data stored in memeory and workers can be added/removed manually, so
   * if we stop the server, all data will be lost

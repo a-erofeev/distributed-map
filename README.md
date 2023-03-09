@@ -19,8 +19,8 @@ preconditions:
 
 usage:
 * build application by running of build.sh
-* start master server with the give number of workers (by default - 2 workers)
-* start clients and send commands to the server
+* start master server (run-server.sh) with the given number of workers (by default - 2 workers)
+* start clients (run-clients.sh) and send commands to the server
 
 logging:
 * system logs to /tmp/distributed_map.log
